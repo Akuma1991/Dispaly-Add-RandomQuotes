@@ -90,7 +90,6 @@ function addQuote() {
         quoteAuthor: addQuoteAuthor.value
     };
     if (quoteObject.quoteAuthor == "" || quoteObject.quoteContent == "") {
-        // alert('enter vaild quote');
         invalidQuote.innerHTML = `please insert valid quote`;
     }
     else if (compareQuotes() == 1) {
