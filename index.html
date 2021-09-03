@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Random Quotes</title>
+</head>
+
+<body>
+
+
+
+    <div id="container" class=" container w-75 mt-5  text-center">
+        <h1>Quote of the Day </h1>
+        <p class=" my-5 fst-italic text-muted">
+            Press the button below to recieve a random quote!
+        </p>
+        <button id="btn" class="btn btn-primary py-4 px-5 text-capitalize text-white fs-5 me-5" onclick=" newQuotes()">
+            Play Quote
+        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary py-4 px-5 text-capitalize text-white fs-5" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Add Quote
+        </button>
+
+        <div id="demo" class=" demo my-5 p-5  w-75 m-auto text-white ">
+            <p id="quoteContent" class=" fst-italic "></p>
+            <p id="quoteAuthor" class="text-white-50 fw-bolder"></p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Your Favourite Quote</h5>
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="invalidQuote" class=" text-danger fst-italic fw-lighter text-center fs-6"></div>
+
+                    <label for="productName">Quote Content:</label>
+                    <input type="text" class="form-control mt-3 mb-5" id="addQuoteContent"
+                        placeholder="Write Quote Here">
+
+                    <div id="invalidQuote" class=" text-danger fst-italic"></div>
+
+                    <label for="productName">Quote Author:</label>
+                    <input type="text" class="form-control mt-3 mb-5" id="addQuoteAuthor"
+                        placeholder="Write Author Name">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="addQuote()">Add </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="clearQuote()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
